@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class GuessingGame {
 
     public static void main(String[] args) {
-        int chosenNumber = 56;
+        int chosenNumber = 1 + (int) (100 * Math.random());
+
         // Prompt for user input
         System.out.println("What is the secret number??");
 
@@ -21,10 +22,10 @@ public class GuessingGame {
         if (userGuess == chosenNumber) {
             System.out.println("Spot on! You got it!");
         } else if (userGuess > chosenNumber) {
-            System.out.println("Not quite, you're too high");
+            System.out.println("Not quite, you're too high. It was " +chosenNumber);
 
         } else if (userGuess < chosenNumber) {
-            System.out.println("A little low this time, try again");
+            System.out.println("A little low this time. It was " + chosenNumber);
         }
 
     }
